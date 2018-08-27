@@ -108,8 +108,9 @@ section {
   display: block;
 }
 body {
-  font-family: "NSK", sans-serif;
+  font-family: "NSK", sans-serif, Helvetica;
   line-height: 1;
+  letter-spacing: -1px;
 }
 ol,
 ul {

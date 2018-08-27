@@ -24,7 +24,10 @@
   position: relative;
   height: 100%;
   padding: 100px 0;
+  background: transparent;
   background-color: rgba(255, 255, 255, 0.5);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#80ffffff,endColorStr=#80ffffff)";
+  zoom: 1;
 }
 
 .section__main .section__main-box > strong {
@@ -61,44 +64,45 @@
   background-color: #eee;
 }
 
-.section__intro .section__box2 {
-  background-color: #fff;
+.section__intro .section__box {
+  overflow: hidden;
+  position: relative;
 }
 
-.section__box2 {
+.section__box {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.section__intro .section__box2 .section__column {
-  float: left;
-}
-
-.section__intro .section__box2 .section__column:last-child {
-  width: 500px;
-  padding-top: 60px;
-  padding-left: 70px;
-}
-
-.section__intro .section__box2 .section__column:first-child {
-  float: right;
+.section__intro .section__box .section__column:last-child {
   position: relative;
-  width: 600px;
+  width: 500px;
+  height: 100%;
+  padding-top: 50px;
+  padding-left: 60px;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 2;
 }
 
-.section__intro .section__box2 .section__column:first-child > img {
+.section__intro .section__box .section__column:first-child {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.section__intro .section__box .section__column:first-child > img {
   width: 100%;
 }
 
-.section__intro .section__box2 .section__column:first-child > strong {
+.section__intro .section__box .section__column:first-child > strong {
   position: absolute;
-  right: 10px;
-  bottom: 30px;
+  right: 20px;
+  bottom: 20px;
   color: #fff;
   font-size: 72px;
 }
 
-.section__box2 h2 {
+.section__box h2 {
   display: inline-block;
   position: relative;
   margin-bottom: 40px;
@@ -107,7 +111,7 @@
   color: #333;
 }
 
-.section__box2 h2 > span {
+.section__box h2 > span {
   display: block;
   position: absolute;
   bottom: 7px;
@@ -116,7 +120,7 @@
   background-color: rgba(239, 236, 233, 0.8);
 }
 
-.section__intro .section__box2 .section__column > p {
+.section__intro .section__box .section__column > p {
   margin-bottom: 35px;
   font-family: "Nanum Square", sans-serif;
   font-weight: 400;
@@ -124,11 +128,11 @@
   line-height: 1.5;
 }
 
-.section__intro .section__box2 .section__column > p > span {
+.section__intro .section__box .section__column > p > span {
   display: block;
 }
 
-.section__intro .section__box2:after {
+.section__intro .section__box:after {
   display: block;
   clear: both;
   content: "";
@@ -146,7 +150,7 @@
   padding: 40px;
   padding-bottom: 30px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .section__white > ul:after {
@@ -172,7 +176,8 @@
 
 .section__white > ul > li > em {
   display: block;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
+  font-family: "Nanum Square", sans-serif;
   text-align: right;
   color: #424242;
   font-size: 22px;
@@ -192,35 +197,37 @@
 }
 
 .section__prdf {
-  padding: 100px 0;
+  padding: 70px 0 80px;
   background: url("../images/bg_prdfBox.png") no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-.section__prdf .section__box2:after {
+.section__prdf .section__box:after {
   display: block;
   clear: both;
   content: "";
 }
 
-.section__prdf .section__box2 > h2 {
+.section__prdf .section__box > h2 {
   color: #fff;
 }
 
-.section__prdf .section__box2 h2 > span {
+.section__prdf .section__box h2 > span {
   background-color: rgba(168, 168, 168, 0.8);
+}
+
+.button__list {
+  float: left;
+  width: 220px;
 }
 
 .section__prdf button {
   position: relative;
-  float: left;
-  width: 32.3%;
-  margin-left: 1.5%;
-}
-
-.section__prdf button:first-child {
-  margin-left: 0;
+  width: 100%;
+  padding: 19.1px 0;
+  background: #434343;
+  filter: grayscale(1);
 }
 
 .section__prdf button > img {
@@ -254,7 +261,8 @@
 
 .button__cont {
   float: left;
-  margin: 15px 0;
+  width: 880px;
+  padding: 15px 0;
   background-color: rgba(255, 255, 255, 0.6);
   *zoom: 1;
 }
@@ -271,7 +279,8 @@
 }
 
 .section__prdf .button__cont .button__cont-img {
-  width: 64%;
+  width: 60%;
+  margin-right: 1%;
 }
 
 .button__cont .button__cont-img > img {
@@ -284,7 +293,7 @@
 
 .button__cont .button__cont-box > strong {
   display: block;
-  margin: 50px 0 30px;
+  margin: 25px 0 20px;
   font-size: 22px;
   color: #1a9191;
 }
@@ -296,6 +305,7 @@
 
 .button__cont .button__cont-box > ul > li > em {
   font-weight: 500;
+  color: #424242;
 }
 
 .button__cont .button__cont-box > ul > li > span {
@@ -305,7 +315,7 @@
 }
 
 .button__cont .button__cont-box > ul > li:last-child {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .button__cont .button__cont-box > ul > li > p {
@@ -500,8 +510,8 @@
     font-size: 1.2rem;
   }
 
-  .section__box2 h2 {
-    font-size: 5rem;
+  .section__box h2 {
+    font-size: 4rem;
   }
 
   .section__main {
@@ -557,67 +567,95 @@
     padding: 0;
   }
 
-  .section__intro .section__box2 {
+  .section__intro .section__box {
     background-color: #eee;
   }
 
-  .section__intro .section__box2 h2 {
+  .section__intro .section__box h2 {
     position: absolute;
-    top: -70px;
+    top: -60px;
     color: #fff;
   }
 
-  .section .section__intro .section__box2 .section__column {
-    float: none;
-    width: 100%;
+  .section__intro .section__box .section__column:first-child {
+    position: relative;
   }
 
-  .section__intro .section__box2 .section__column:first-child > strong {
+  .section__intro .section__box .section__column:first-child:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.21);
+  }
+
+  .section__intro .section__box .section__column:first-child > strong {
     display: none;
     font-size: 1.2rem;
   }
 
-  .section__intro .section__box2 .section__column:last-child {
-    position: relative;
+  .section__intro .section__box .section__column:last-child {
+    width: 100%;
     padding: 3rem;
+    background: none;
   }
 
-  .section__intro .section__box2 .section__column > p {
+  .section__intro .section__box .section__column > p {
     font-size: 1.5rem;
   }
 
   .section__img {
     margin: 0;
     padding: 3rem;
-    background-position: center center;
+    background-position: 40% center;
+  }
+
+  .section__white > ul {
+    margin-bottom: 0;
   }
 
   .section__white > ul > li {
     float: none;
     width: 100%;
+    margin-top: 1.5rem;
   }
 
   .section__white > ul > li > em {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .section__white > ul > li > p {
     font-size: 1.4rem;
   }
 
+  .section__white > ul > li > p > span {
+    display: inline-block;
+  }
+
   .section__prdf {
     padding: 3rem;
   }
 
-  .section__prdf .section__box2 button {
+  .button__list,
+  .button__cont {
     float: none;
     width: 100%;
-    margin-top: 1.5rem;
-    margin-left: 0;
   }
 
-  .section__prdf .section__box2 button:first-child {
-    margin-top: 0;
+  .button__list {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .section__prdf .section__box button {
+    width: 31.3%;
+    margin-top: 1rem;
+    margin-left: 0;
   }
 
   .button__cont {
@@ -635,13 +673,10 @@
     width: 100%;
   }
 
-  .button__cont .button__cont-box {
-    /*padding: 1.5rem;*/
-  }
-
   .button__cont .button__cont-box > strong {
     margin: 3rem 0 1.5rem;
     text-align: center;
+    font-size: 2rem;
   }
 
   .button__cont .button__cont-box > ul > li {
