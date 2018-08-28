@@ -10,14 +10,20 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="퍼블리셔 김민지 포토폴리오" />
 	<meta property="og:description" content="퍼블리셔 김민지 포토폴리오입니다." />
-  <title>Document</title>
+  <title>annkimm portfolio</title>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="js/jquery.easeScroll.js"></script>
+  <script src="js/common.js"></script>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/main.css">
+  <script>
+  $("html").easeScroll();
+</script>
 </head>
 <body>
   <header class="header">
-    <div class="header__box">
+    <div id="header" class="header__box">
       <div class="header__left">
         <h1><a href="#"><img src="images\img_sign2.png" alt="logo"></a></h1>
       </div>
@@ -174,26 +180,69 @@
             </button>
           </div>
           <div class="button__cont">
-            <div class="button__cont-img"><img src="images\img_prdfMain1.png" alt="포토폴리오 프로젝트1"></div>
-            <div class="button__cont-box">
-              <strong>한국화재보험협회 웹진 82호</strong>
-              <ul>
-                <li>
-                  <em>주 소 </em>
-                  <span><a target="_blank" href="https://www.kfpa.or.kr/webzine/201803/">www.kfpa.or.kr/webzine/201803/</a></span>
-                </li>
-                <li>
-                  <em>뷰포인트 </em>
-                  <span>반응형</span>
-                </li>
-                <li>
-                    <p>- 기존의 디자인이 올드한 편이여서 디자인이 완전히 바뀐 케이스이며,
-                      작업착수 당시에 웹진 발간일이 얼마 남지 않은 기간에 시작하여서 총 작업기간이 8일 정도 걸렸습니다.</p>
-                    <p>- 기존의 웹진에서 HTML 환경에서 작업되었기 때문에 같이 HTML환경에서 작성하였습니다.</p>
-                    <p>- css3가 사용되어서 IE 10까지 대응하도록 하였습니다.</p>
-                </li>
-              </ul>
-            </div>
+            <div class="button__cont-slide button__cont-slide1">
+              <div class="button__cont-img"><img src="images\img_prdfMain1.png" alt="포토폴리오 프로젝트1"></div>
+              <div class="button__cont-box">
+                <strong>한국화재보험협회 웹진 82호</strong>
+                <ul>
+                  <li>
+                    <em>URL</em>
+                    <span><a target="_blank" href="https://www.kfpa.or.kr/webzine/201803/">www.kfpa.or.kr/webzine/201803/</a></span>
+                  </li>
+                  <li>
+                    <em>뷰포인트 </em>
+                    <span>반응형</span>
+                  </li>
+                  <li>
+                      <p>- 기존의 디자인이 올드한 편이여서 디자인이 완전히 바뀐 케이스이며,
+                        작업착수 당시에 웹진 발간일이 얼마 남지 않은 기간에 시작하여서 총 작업기간이 8일 정도 걸렸습니다.</p>
+                      <p>- 기존의 웹진에서 HTML 환경에서 작업되었기 때문에 같이 HTML환경에서 작성하였습니다.</p>
+                      <p>- css3가 사용되어서 IE 10까지 대응하도록 하였습니다.</p>
+                  </li>
+                </ul>
+              </div>
+            </div><!--button__cont-slide1-->
+            <div class="button__cont-slide button__cont-slide2">
+              <div class="button__cont-img"><img src="images\img_prdfMain2.png" alt="포토폴리오 프로젝트1"></div>
+              <div class="button__cont-box">
+                <strong>LS 오토모티브</strong>
+                <ul>
+                  <li>
+                    <em>URL</em>
+                    <span><a target="_blank" href="https://lsautomotive.com/kr/main.do">lsautomotive.com/kr/main.do</a></span>
+                  </li>
+                  <li>
+                    <em>뷰포인트 </em>
+                    <span>반응형</span>
+                  </li>
+                  <li>
+                    <p>- 재직할때까지 유지보수로 회사에서 퍼블리싱을 맡았습니다.</p>
+                    <p>- 사이트가 jsp(자바) 제작되어 진행되었습니다.</p>
+                    <p>- 웹접근성,웹표준 "웹와치"의 갱신검사를 맡아서 진행하였습니다.</p>
+                  </li>
+                </ul>
+              </div>
+            </div><!--button__cont-slide2-->
+            <div class="button__cont-slide button__cont-slide3">
+              <div class="button__cont-img"><img src="images\img_prdfMain3.png" alt="포토폴리오 프로젝트1"></div>
+              <div class="button__cont-box">
+                <strong>AJ 탕전원</strong>
+                <ul>
+                  <li>
+                    <em>URL</em>
+                    <span><a target="_blank" href="http://ajpharmacopuncture.co.kr/">ajpharmacopuncture.co.kr/</a></span>
+                  </li>
+                  <li>
+                    <em>뷰포인트 </em>
+                    <span>각각 PC,모바일 버전</span>
+                  </li>
+                  <li>
+                      <p>- 디자인과 퍼블리싱만 진행되어 제가 퍼블리싱을 맡았고 개발은 고객사에서 한 케이스입니다.</p>
+                      <p>- 최소 IE8까지 맞춰달라고 요구하였기 때문에 그에 따라 크로스 브라우징하였습니다.</p>
+                  </li>
+                </ul>
+              </div>
+            </div><!--button__cont-slide3-->
         </div><!--button__cont-->
     </div>
   </section>
