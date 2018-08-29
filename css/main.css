@@ -3,6 +3,14 @@
   top: 0;
 }
 
+#header__height.on{
+	background-color:#FFF;
+}
+
+#header__height.on .header__left > h1{
+	background-color:#23293b;
+}
+
 .section__main {
   width: 100%;
   padding: 200px 0 160px;
@@ -181,8 +189,11 @@
   font-size: 15px;
 }
 
+.section__skills{
+	padding:100px 0;
+}
+
 .section__img {
-  margin: 100px auto;
   padding: 100px;
   background: url("../images/bg_skills.jpg") no-repeat;
   -webkit-background-size: cover;
@@ -419,6 +430,10 @@
   padding: 0 10px;
 }
 
+.header__right .header__mobile > ul > li.on >a{
+  border-bottom: 1px solid #666;
+}
+
 .header__right .header__mobile > ul > li > a {
   color: #424242;
   border-bottom: 1px solid transparent;
@@ -451,6 +466,14 @@
   .header {
     height: 5rem;
     background-color: unset;
+  }
+  
+  #header__height.on{
+	  background-color:#23293b;
+  }
+  
+  #header__height.on .header__left > h1{
+	  background:none;
   }
 
   .header__left > h1 {
@@ -745,11 +768,26 @@
   }
 }
 
+@media (max-width:767px) and (orientation: landscape){
+	#section1 .section__main-border{
+		height:62.5vh;
+	}
+} 
+
 @media (max-width: 1023px) and (min-width: 768px) {
   .header {
     height: 5rem;
     background-color: unset;
   }
+  
+  #header__height.on{
+	  background-color:#23293b;
+  }
+  
+  #header__height.on .header__left > h1{
+	  background:none;
+  }
+
 
   .header__left > h1 {
     width: 11rem;
@@ -942,6 +980,10 @@
 @media (max-width: 1099px) and (min-width: 1024px) {
   .header__box {
     margin: 0 4rem;
+  }
+  
+  #header__height.on .header__left > h1>a{
+	  margin:0 auto;
   }
 
   .header__left > h1 > a {
