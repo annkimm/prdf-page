@@ -12,9 +12,16 @@ window.addEventListener("resize",resizeH)
 
 function resizeH (e){
 	var bodyHeight= window.innerHeight;
+	var bodyWdith=window.innerWidth;
 	var main=document.getElementsByClassName("section__main")
+	
 	main[0].style.height=bodyHeight+"px";
-
+	
+	if(bodyWdith>1023){
+		document.getElementsByClassName("header__mobile")[0].style.display="block"
+	}else{
+		document.getElementsByClassName("header__mobile")[0].style.display="none"
+	}
 }
 	
 window.addEventListener("scroll",function(){
@@ -45,9 +52,41 @@ window.addEventListener("scroll",function(){
 		
 	});
 	
-});	
+});
+	
 
 $(document).ready(function() {
+	
+	var btn=document.getElementById("header__button");
+	var clseBtn=btn.children;
+	var MLayer=document.getElementsByClassName("header__mobile");
+	var rewidth;
+	
+	btn.addEventListener("click",function(evt){
+		
+		evt.preventDefault();
+		
+		if(btn.classList.contains("mobile__change")==false){
+			MLayer[0].style.display="block";
+			btn.classList.add("mobile__change");
+			clseBtn[0].classList.add("mobile__change1");
+			clseBtn[1].classList.add("mobile__change2");
+			document.getElementsByTagName("html")[0].classList.add("no-scroll")
+		}else{
+			clse()
+		}
+		
+		rewidth=window.innerWidth;	
+		
+	})
+	
+	function clse(){
+		MLayer[0].style.display="none";
+		btn.classList.remove("mobile__change");
+		clseBtn[0].classList.remove("mobile__change1");
+		clseBtn[1].classList.remove("mobile__change2");
+		document.getElementsByTagName("html")[0].classList.remove("no-scroll");		
+	}
 	
 	var menu=$("#header__menu li>a")
 	
@@ -71,11 +110,41 @@ $(document).ready(function() {
 			$('html, body').animate({
 				scrollTop: $("#section"+idxplus).offset().top-header_height
 			}, 1000);
+			
+			if(rewidth<768){
+				setTimeout(function(){
+					clse();
+				},1050);
+			}
+			
 		
 		});
 		
 		
 	});
+	
+	var $prdfBtn=$(".button__list button");
+	var idx=0;
+	
+	$.each($prdfBtn,function(indx){
+		$(this).click(function(evt){
+			evt.preventDefault();
+			
+			idx=$(this).index()
+			
+			slide(idx)
+			
+			
+		})
+		
+		function slide(num){
+			
+			$prdfBtn.eq(num).addClass("active").siblings("button").removeClass("active")
+			
+			$(".button__cont .button__cont-slide").eq(num).fadeIn().siblings("div").css("display","none")
+					
+		}
+	})
 
 });
 
