@@ -36,7 +36,7 @@ window.addEventListener("scroll",function(){
 	}
 	
 	var windowScroll=$(window).scrollTop();
-	var $section=$(".section__div")
+	var $section=$(".section__inner")
 
 	$.each($section,function(idx,item){
 
