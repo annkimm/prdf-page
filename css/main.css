@@ -153,13 +153,14 @@
 
 .section__intro .section__box .section__column:last-child {
   position: relative;
-  width: 500px;
+  width: 45.5%;
   height: 100%;
-  padding-top: 50px;
+  padding-top: 45px;
   padding-left: 60px;
   background-color: rgba(255, 255, 255, 0.6);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#99ffffff,endColorStr=#99ffffff)";
-  *zoom: 1; 
+  *
+  zoom: 1;
   z-index: 2;
 }
 
@@ -1043,6 +1044,7 @@
 
   .button__cont {
     width: 78%;
+    height: 100%;
   }
 }
 
@@ -1070,12 +1072,8 @@
     margin: 0 4rem;
   }
 
-  .section__intro {
+  .section__intro,.section__skills {
     padding: 5rem 0;
-  }
-
-  .section__img {
-    margin: 5rem 4rem;
   }
 
   .button__cont .button__cont-img,
