@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .header {
   position: fixed;
   top: 0;
@@ -21,6 +23,7 @@
 }
 
 .section__main .section__main-border {
+  display: none;
   position: relative;
   top:50%;
   left:50%;
@@ -587,6 +590,14 @@
     line-height: 1.5;
     letter-spacing: -0.1rem;
   }
+  
+  .header__right .header__mobile > ul > li > a:hover {
+	border-bottom: 0;
+  }
+  
+  .header__right .header__mobile > ul > li.on > a{
+	  border-bottom:0;
+  }
 
   .header__right .header__mobile > ul > li > a {
     display: inline-block;
@@ -907,6 +918,15 @@
     line-height: 1.5;
     letter-spacing: -0.1rem;
   }
+  
+   .header__right .header__mobile > ul > li > a:hover {
+	border-bottom: 0;
+  }
+  
+  .header__right .header__mobile > ul > li.on > a{
+	  border-bottom:0;
+  }
+ 
 
   .header__right .header__mobile > ul > li > a {
     display: inline-block;
@@ -946,6 +966,13 @@
     height: 100vh;
     padding: 0;
     background-position: 0% 50%;
+  }
+
+  .section__main .section__main-border{
+  	position: relative;
+  	top:0;
+  	left:0;
+  	margin: 0 auto;
   }
 
   .section__intro {
@@ -1031,6 +1058,13 @@
   .header__left > h1 > a {
     margin: 0;
   }
+  
+  .header__right .header__mobile > ul > li > a:hover {
+	border-bottom: 0;
+  }
+  .header__right .header__mobile > ul > li.on > a{
+	  border-bottom:1px solid #666;
+  }  
 
   .section__box {
     margin: 0 4rem;
