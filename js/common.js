@@ -1,4 +1,35 @@
 
+var ieMatch=navigator.userAgent.toLowerCase();
+var ieNum=parseInt(ieMatch.split('msie')[1])
+
+function add(el,classN){
+	
+	if(ieNum<=9){
+			
+		el.className=classN;
+		
+	}else{
+		
+		el.classList.add(classN);
+
+	}			
+			
+} //ie에 따라 코드다르게 class 추가
+
+function remove(el,classN){
+	
+	if(ieNum<=9){
+
+		el.removeAttribute("class")
+		
+	}else{
+
+		el.classList.remove(classN);
+
+	}			
+			
+} //ie에 따라 코드다르게 class 제거
+
 window.addEventListener('load',onloadH);
 
 function onloadH(e){
@@ -7,7 +38,7 @@ function onloadH(e){
 	main[0].style.height=bodyHeight+"px";
 	resizeH();
 	document.getElementsByClassName("section__main-border")[0].style.display="block"
-}
+} //사이트가 로딩완료시 메인 완전 block 표시
 
 var bodyWdith;
 window.addEventListener("resize",resizeH)
@@ -24,7 +55,7 @@ function resizeH (e){
 	}else{
 		document.getElementsByClassName("header__mobile")[0].style.display="none"
 	}
-}
+} //browser에 따라 height 변경
 	
 window.addEventListener("scroll",function(){
 
@@ -32,9 +63,11 @@ window.addEventListener("scroll",function(){
 	var header_height = header.offsetHeight	
 	
 	if (header_height < window.pageYOffset) {
-		header.classList.add("on");
+		//classMove.Cadd(header,"on")
+		add(header,"on")
 	} else {
-		header.classList.remove("on");
+		//header.classList.remove("on");
+		remove(header,"on")
 	}
 	
 	var windowScroll=$(window).scrollTop();
@@ -54,7 +87,7 @@ window.addEventListener("scroll",function(){
 		
 	});
 	
-});
+}); // 스크롤에 따라 header 고정 & section에 따라 메뉴 border 변경
 	
 
 $(document).ready(function() {
@@ -79,7 +112,7 @@ $(document).ready(function() {
 			console.log("b");
 		}
 				
-	})
+	}) // 모바일 햄버거 버튼
 	
 	function clse(){
 		MLayer[0].style.display="none";
@@ -87,7 +120,7 @@ $(document).ready(function() {
 		clseBtn[0].classList.remove("mobile__change1");
 		clseBtn[1].classList.remove("mobile__change2");
 		document.getElementsByTagName("html")[0].classList.remove("no-scroll");		
-	}
+	} 
 	
 	var menu=$("#header__menu li>a")
 	
@@ -113,7 +146,7 @@ $(document).ready(function() {
 				menu_parent.addClass("on").siblings("li").removeClass("on");
 			}
 					
-			if(bodyWdith<768){
+			if(bodyWdith<1024){
 				setTimeout(function(){
 					clse();
 				},1050);
@@ -123,7 +156,7 @@ $(document).ready(function() {
 		});
 		
 		
-	});
+	});// 메뉴 클릭시 해당 section으로 이동
 	
 	var $prdfBtn=$(".button__list button");
 	var idx=0;
@@ -146,7 +179,7 @@ $(document).ready(function() {
 			$(".button__cont .button__cont-slide").eq(num).fadeIn().siblings("div").css("display","none")
 					
 		}
-	})
+	}) // 포폴 슬라이드 버튼 클릭시 해당 슬라이드 나타냄 
 
 });
 
